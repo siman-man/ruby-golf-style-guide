@@ -52,6 +52,18 @@ Good
 "hello\nworld\nruby".split #=> ['hello', 'world', 'ruby']
 ```
 
+Bad
+
+```ruby
+"ruby".split('') #=> ["r", "u", "b", "y"]
+```
+
+Good
+
+```ruby
+"ruby".chars #=> ["r", "u", "b", "y"]
+```
+
 # 配列
 
 ## join
