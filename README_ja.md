@@ -21,3 +21,17 @@ Good
 ```Ruby
 3>2?true:false
 ```
+
+## if
+
+Bad
+
+```Ruby
+n=3 if a>3
+```
+
+Good
+
+```Ruby
+a>3&&n=3
+```
