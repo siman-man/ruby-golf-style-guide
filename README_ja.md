@@ -38,7 +38,7 @@ a>3&&n=3
 
 # 文字列
 
-# split
+## split
 
 Bad
 
@@ -50,4 +50,20 @@ Good
 
 ```ruby
 "hello\nworld\nruby".split #=> ['hello', 'world', 'ruby']
+```
+
+# 配列
+
+## join
+
+Bad
+
+```ruby
+[1,2,3].join('+') #=> 1+2+3
+```
+
+Good
+
+```ruby
+[1,2,3]*'+' #=> 1+2+3
 ```
