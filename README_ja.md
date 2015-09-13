@@ -8,7 +8,7 @@ Rubyでコードゴルフを行うときに知っていると便利な知識を�
 
 Bad
 
-```Ruby
+```ruby
 if 3>2
   true
 else
@@ -18,7 +18,7 @@ end
 
 Good
 
-```Ruby
+```ruby
 3>2?true:false
 ```
 
@@ -26,12 +26,28 @@ Good
 
 Bad
 
-```Ruby
+```ruby
 n=3 if a>3
 ```
 
 Good
 
-```Ruby
+```ruby
 a>3&&n=3
+```
+
+# 文字列
+
+# split
+
+Bad
+
+```ruby
+"hello\nworld\nruby".split("\n") #=> ['hello', 'world', 'ruby']
+```
+
+Good
+
+```ruby
+"hello\nworld\nruby".split #=> ['hello', 'world', 'ruby']
 ```
