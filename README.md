@@ -91,6 +91,20 @@ Good
 "ruby".chars #=> ["r", "u", "b", "y"]
 ```
 
+## char
+
+Bad
+
+```ruby
+c='a'
+```
+
+Good
+
+```ruby
+c=?a
+```
+
 # Numeric
 
 Bad
