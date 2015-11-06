@@ -1,6 +1,24 @@
 # code_golf_tips_of_ruby
 Code golf tips of ruby.
 
+# STDIO
+
+## Output
+
+Bad
+
+```ruby
+w="Hello Ruby!"
+puts w
+```
+
+Good
+
+```ruby
+w="Hello Ruby!"
+$><<w
+```
+
 # Condition
 
 ## Ternary operator
