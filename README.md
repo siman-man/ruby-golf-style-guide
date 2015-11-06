@@ -177,6 +177,36 @@ Good
 n=1e-4 #=> 0.0001
 ```
 
+## Bit operation
+
+Bad
+
+```ruby
+n=3
+p (n+1)*3 #=> 12
+```
+
+Good
+
+```ruby
+n=3
+p -~n*3 #=> 12
+```
+
+Bad
+
+```ruby
+n=3
+p (n-1)*3 #=> 6
+```
+
+Good
+
+```ruby
+n=3
+p ~-n*3 #=> 6
+```
+
 # Array
 
 ## join
