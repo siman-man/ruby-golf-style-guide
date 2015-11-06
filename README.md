@@ -1,4 +1,4 @@
-# code_golf_tips_of_ruby
+# Code Golf tips of ruby
 Code golf tips of ruby.
 
 # STDIO
