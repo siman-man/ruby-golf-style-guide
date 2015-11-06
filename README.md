@@ -123,6 +123,18 @@ Good
 c=?a
 ```
 
+## symbol
+
+Bad
+
+```ruby
+puts"ruby"
+```
+
+```ruby
+puts:ruby
+```
+
 # Numeric
 
 Bad
