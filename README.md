@@ -131,6 +131,8 @@ Bad
 puts"ruby"
 ```
 
+Good
+
 ```ruby
 puts:ruby
 ```
