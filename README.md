@@ -21,6 +21,20 @@ Good
 3>2?true:false
 ```
 
+## Compare
+
+Bad
+
+```ruby
+n<=0
+```
+
+Good
+
+```ruby
+n<1
+```
+
 ## if
 
 Bad
