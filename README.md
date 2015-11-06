@@ -19,6 +19,20 @@ w="Hello Ruby!"
 $><<w
 ```
 
+## Output(Numeric)
+
+Bad
+
+```ruby
+puts 100
+```
+
+Good
+
+```ruby
+p 100
+```
+
 # Condition
 
 ## Ternary operator
