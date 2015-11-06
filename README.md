@@ -19,6 +19,18 @@ w="Hello Ruby!"
 $><<w
 ```
 
+Bad
+
+```ruby
+10.times{puts:hello}
+```
+
+Good
+
+```ruby
+puts [:hello]*10
+```
+
 ## Output(Numeric)
 
 Bad
