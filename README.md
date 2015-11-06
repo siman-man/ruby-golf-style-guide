@@ -172,3 +172,15 @@ Very Good
 ```
 
 ## sum
+
+Bad
+
+```ruby
+[1,2,3].inject(:+) #=> 6
+```
+
+Good
+
+```ruby
+eval"[1,2,3]*?+" #=> 6
+```
