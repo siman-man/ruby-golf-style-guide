@@ -36,6 +36,20 @@ Good
 a>3&&n=3
 ```
 
+## unless
+
+Bad
+
+```ruby
+n=3 unless a>3
+```
+
+Good
+
+```ruby
+a>3||n=3
+```
+
 # 文字列
 
 ## split
