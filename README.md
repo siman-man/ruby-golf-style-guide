@@ -88,13 +88,13 @@ a>3||n=3
 Bad
 
 ```ruby
-"hello\nworld\nruby".split("\n") #=> ['hello', 'world', 'ruby']
+'hello world ruby'.split(' ') #=> ['hello', 'world', 'ruby']
 ```
 
 Good
 
 ```ruby
-"hello\nworld\nruby".split #=> ['hello', 'world', 'ruby']
+'hello world ruby'.split #=> ['hello', 'world', 'ruby']
 ```
 
 Bad
