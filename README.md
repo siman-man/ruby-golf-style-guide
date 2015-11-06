@@ -91,6 +91,32 @@ Good
 "ruby".chars #=> ["r", "u", "b", "y"]
 ```
 
+# Numeric
+
+Bad
+
+```ruby
+n=10000
+```
+
+Good
+
+```ruby
+n=1e4 #=> 10000.0
+```
+
+Bad
+
+```ruby
+n=0.0001
+```
+
+Good
+
+```ruby
+n=1e-4 #=> 0.0001
+```
+
 # Array
 
 ## join
