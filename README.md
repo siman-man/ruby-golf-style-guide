@@ -198,3 +198,17 @@ Good
 ```ruby
 eval"[1,2,3]*?+" #=> 6
 ```
+
+## index
+
+Bad
+
+```ruby
+[1,2,3].find_index(2) #=> 1
+```
+
+Good
+
+```ruby
+[1,2,3].index(2) #=> 1
+```
