@@ -19,6 +19,8 @@ w="Hello Ruby!"
 $><<w
 ```
 
+---
+
 Bad
 
 ```ruby
@@ -123,6 +125,8 @@ Good
 'hello world ruby'.split #=> ['hello', 'world', 'ruby']
 ```
 
+---
+
 Bad
 
 ```ruby
@@ -179,6 +183,8 @@ Good
 n=1e4 #=> 10000.0
 ```
 
+---
+
 Bad
 
 ```ruby
@@ -190,6 +196,8 @@ Good
 ```ruby
 n=1e-4 #=> 0.0001
 ```
+
+---
 
 Bad
 
@@ -218,6 +226,8 @@ Good
 n=3
 p -~n*3 #=> 12
 ```
+
+---
 
 Bad
 
@@ -249,6 +259,8 @@ Good
 [1,2,3]*'+' #=> 1+2+3
 ```
 
+---
+
 Very Good
 
 ```ruby
@@ -274,6 +286,8 @@ Very Good
 ```ruby
 a=[*1..5] #=> [1,2,3,4,5]
 ```
+
+---
 
 Bad
 
