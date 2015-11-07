@@ -226,6 +226,20 @@ Good
 a=~9
 ```
 
+---
+
+Bad
+
+```ruby
+a=n==0?1:0
+```
+
+Good
+
+```ruby
+a=1[n]
+```
+
 ## Bit operation
 
 Bad
