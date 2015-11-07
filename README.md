@@ -165,6 +165,8 @@ puts:ruby
 
 # Numeric
 
+## define
+
 Bad
 
 ```ruby
@@ -187,6 +189,18 @@ Good
 
 ```ruby
 n=1e-4 #=> 0.0001
+```
+
+Bad
+
+```ruby
+a=-10
+```
+
+Good
+
+```ruby
+a=~9
 ```
 
 ## Bit operation
