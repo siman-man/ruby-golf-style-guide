@@ -185,6 +185,8 @@ puts:ruby
 
 ```ruby
 'hello'*0 #=> ''
+'hello'*1 #=> 'hello'
+'hello'*2 #=> 'hellohello'
 ```
 
 # Numeric
