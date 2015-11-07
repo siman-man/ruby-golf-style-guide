@@ -167,7 +167,6 @@ Good
 "hello\n"=~/$/ #=> 5
 ```
 
-
 ## symbol
 
 Bad
@@ -180,6 +179,12 @@ Good
 
 ```ruby
 puts:ruby
+```
+
+## other tips
+
+```ruby
+'hello'*0 #=> ''
 ```
 
 # Numeric
