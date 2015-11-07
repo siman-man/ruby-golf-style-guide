@@ -153,6 +153,21 @@ Good
 c=?a
 ```
 
+## size
+
+Bad
+
+```ruby
+"hello\n".size-1 #=> 5
+```
+
+Good
+
+```ruby
+"hello\n"=~/$/ #=> 5
+```
+
+
 ## symbol
 
 Bad
