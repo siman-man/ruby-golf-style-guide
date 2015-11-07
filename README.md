@@ -261,6 +261,18 @@ Very Good
 a=[*1..5] #=> [1,2,3,4,5]
 ```
 
+Bad
+
+```ruby
+a=['ruby','rails','jruby']
+```
+
+Good
+
+```ruby
+a=%w(ruby rails jruby)
+```
+
 ## unshift
 
 Bad
