@@ -239,6 +239,24 @@ Good
 puts:ruby
 ```
 
+## match
+
+Bad
+
+```ruby
+if 'ruby'=~/r/
+  puts 'hello!'
+end
+```
+
+Good
+
+```ruby
+if 'ruby'[?r]
+  puts 'Hello!'
+end
+```
+
 ## other tips
 
 ```ruby
