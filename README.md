@@ -1,6 +1,36 @@
 # Code Golf tips of ruby
 Code golf tips of ruby.
 
+# Variable
+
+## define
+
+Bad (too many character)
+
+```ruby
+name='siman'
+```
+
+Good
+
+```ruby
+n='siman'
+```
+
+## Special
+
+Bad
+
+```
+a=[] #=> []
+```
+
+Good
+
+```ruby
+$* #=> []
+```
+
 # STDIO
 
 ## Output
