@@ -31,6 +31,20 @@ Good
 $* #=> []
 ```
 
+---
+
+Bad
+
+```ruby
+ARGV
+```
+
+Good
+
+```ruby
+$*
+```
+
 # STDIO
 
 ## Output
