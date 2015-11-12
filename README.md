@@ -45,6 +45,20 @@ Good
 $*
 ```
 
+---
+
+Bad
+
+```ruby
+"\n"
+```
+
+Good
+
+```ruby
+$/
+```
+
 # STDIO
 
 ## Output
