@@ -468,3 +468,16 @@ Good
 ```ruby
 [1,2,3].index(2) #=> 1
 ```
+
+
+# Hash
+
+## other
+
+check odd? or even?
+
+```ruby
+h={}
+h[1]^=1 #=> nil^1  -> true
+h[1]^=1 #=> true^1 -> false
+```
