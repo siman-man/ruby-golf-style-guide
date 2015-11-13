@@ -1,5 +1,5 @@
 # Code Golf tips of ruby
-Code golf tips of ruby.
+Code golf tips of ruby. (move wiki page [2015/11/14])
 
 # Variable
 
