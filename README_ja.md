@@ -459,20 +459,18 @@ eval"[1,2,3]*?+" #=> 6
 
 ## index
 
-Bad
+Rubyでは同じ動作でもっと短い関数名が存在していたりします。
 
 ```ruby
+# Bad
 [1,2,3].find_index(2) #=> 1
-```
 
-Good
-
-```ruby
+# Good
 [1,2,3].index(2) #=> 1
 ```
 
 
-# Hash
+# ハッシュ(Hash)
 
 ## other
 
