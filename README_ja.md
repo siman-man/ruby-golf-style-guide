@@ -210,9 +210,9 @@ end
 'hello'*2 #=> 'hellohello'
 ```
 
-# Numeric
+# 数値(Numeric)
 
-## define
+## 宣言
 
 ```ruby
 # bad
@@ -252,7 +252,7 @@ a=n==0?1:0
 a=1[n]
 ```
 
-## Bit operation
+## ビット演算
 
 ```ruby
 # bad
@@ -276,7 +276,7 @@ n=3
 p ~-n*3 #=> 6
 ```
 
-# Array
+# 配列(Array)
 
 ## join
 
