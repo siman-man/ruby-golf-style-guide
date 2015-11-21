@@ -44,6 +44,19 @@ $*
 $/
 ```
 
+## Global
+
+```ruby
+$a=3
+
+# bad
+puts "$a is #{$a}"
+
+# good
+puts "$a is #$a"
+```
+
+
 # STDIO
 
 ## Output
