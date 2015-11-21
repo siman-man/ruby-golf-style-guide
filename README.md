@@ -5,57 +5,42 @@ Code golf tips of ruby. (move wiki page [2015/11/14])
 
 ## define
 
-Bad (too many character)
-
 ```ruby
+# bad (too many character)
 name='siman'
-```
 
-Good
-
-```ruby
+# good
 n='siman'
 ```
 
 ## Special
 
-Bad
-
-```
-a=[] #=> []
-```
-
-Good
 
 ```ruby
+# bad
+a=[] #=> []
+
+# good
 $* #=> []
 ```
 
 ---
 
-Bad
-
 ```ruby
+# bad
 ARGV
-```
 
-Good
-
-```ruby
+# good
 $*
 ```
 
 ---
 
-Bad
-
 ```ruby
+# bad
 "\n"
-```
 
-Good
-
-```ruby
+# good
 $/
 ```
 
@@ -63,45 +48,34 @@ $/
 
 ## Output
 
-Bad
-
 ```ruby
+# bad
 w="Hello Ruby!"
 puts w
-```
 
-Good
-
-```ruby
+# good
 w="Hello Ruby!"
 $><<w
 ```
 
 ---
 
-Bad
-
 ```ruby
+# bad
 10.times{puts:hello}
-```
 
-Good
-
-```ruby
+# good
 puts [:hello]*10
 ```
 
 ## Output(Numeric)
 
-Bad
 
 ```ruby
+# bad
 puts 100
-```
 
-Good
-
-```ruby
+# good
 p 100
 ```
 
@@ -109,61 +83,46 @@ p 100
 
 ## Ternary operator
 
-Bad
 
 ```ruby
+# bad
 if 3>2
   true
 else
   false
 end
-```
 
-Good
-
-```ruby
+# good
 3>2?true:false
 ```
 
 ## Compare
 
-Bad
-
 ```ruby
+# bad
 n<=0
-```
 
-Good
-
-```ruby
+# good
 n<1
 ```
 
 ## if
 
-Bad
-
 ```ruby
+# bad
 n=3 if a>3
-```
 
-Good
-
-```ruby
+# good
 a>3&&n=3
 ```
 
 ## unless
 
-Bad
-
 ```ruby
+# bad
 n=3 unless a>3
-```
 
-Good
-
-```ruby
+# good
 a>3||n=3
 ```
 
@@ -171,87 +130,65 @@ a>3||n=3
 
 ## split
 
-Bad
 
 ```ruby
+# bad
 'hello world ruby'.split(' ') #=> ['hello', 'world', 'ruby']
-```
 
-Good
-
-```ruby
+# good
 'hello world ruby'.split #=> ['hello', 'world', 'ruby']
 ```
 
 ---
 
-Bad
-
 ```ruby
+# bad
 "ruby".split('') #=> ["r", "u", "b", "y"]
-```
 
-Good
-
-```ruby
+# good
 "ruby".chars #=> ["r", "u", "b", "y"]
 ```
 
 ## char
 
-Bad
 
 ```ruby
+# bad
 c='a'
-```
 
-Good
-
-```ruby
+# good
 c=?a
 ```
 
 ## size
 
-Bad
-
 ```ruby
+# bad
 "hello\n".size-1 #=> 5
-```
 
-Good
-
-```ruby
+# good
 "hello\n"=~/$/ #=> 5
 ```
 
 ## symbol
 
-Bad
-
 ```ruby
+# bad
 puts"ruby"
-```
 
-Good
-
-```ruby
+# good
 puts:ruby
 ```
 
 ## match
 
-Bad
-
 ```ruby
+# bad
 if 'ruby'=~/r/
   puts 'hello!'
 end
-```
 
-Good
-
-```ruby
+# good
 if 'ruby'[?r]
   puts 'Hello!'
 end
@@ -269,88 +206,65 @@ end
 
 ## define
 
-Bad
-
 ```ruby
+# bad
 n=10000
-```
 
-Good
-
-```ruby
+# good
 n=1e4 #=> 10000.0
 ```
 
 ---
 
-Bad
-
 ```ruby
+# bad
 n=0.0001
-```
 
-Good
-
-```ruby
+# good
 n=1e-4 #=> 0.0001
 ```
 
 ---
 
-Bad
-
 ```ruby
+# bad
 a=-10
-```
 
-Good
-
-```ruby
+# good
 a=~9
 ```
 
 ---
 
-Bad
-
 ```ruby
+# bad
 a=n==0?1:0
-```
 
-Good
-
-```ruby
+# good
 a=1[n]
 ```
 
 ## Bit operation
 
-Bad
 
 ```ruby
+# bad
 n=3
 p (n+1)*3 #=> 12
-```
 
-Good
-
-```ruby
+# good
 n=3
 p -~n*3 #=> 12
 ```
 
 ---
 
-Bad
-
 ```ruby
+# bad
 n=3
 p (n-1)*3 #=> 6
-```
 
-Good
-
-```ruby
+# good
 n=3
 p ~-n*3 #=> 6
 ```
@@ -359,113 +273,76 @@ p ~-n*3 #=> 6
 
 ## join
 
-Bad
-
 ```ruby
+# bad
 [1,2,3].join('+') #=> 1+2+3
-```
 
-Good
-
-```ruby
-[1,2,3]*'+' #=> 1+2+3
-```
-
-Very Good
-
-```ruby
+# good
 [1,2,3]*?+ #=> 1+2+3
 ```
 
 ## uniq
 
-Bad
-
 ```ruby
+# bad
 [1,1,2,2,3,3].uniq #=> [1,2,3]
-```
 
-Good
-
-```ruby
+# good
 [1,1,2,2,3,3]|[] #=> [1,2,3]
 ```
 
 ## define
 
-Bad
 
 ```ruby
+# bad
 a=[1,2,3,4,5] #=> [1,2,3,4,5]
-```
 
-Good
-
-```ruby
-a=1,2,3,4,5 #=> [1,2,3,4,5]
-```
-
-Very Good
-
-```ruby
 a=[*1..5] #=> [1,2,3,4,5]
 ```
 
 ---
 
-Bad
-
 ```ruby
+# bad
 a=['ruby','rails','jruby']
-```
 
-Good
-
-```ruby
+# good
 a=%w(ruby rails jruby)
 ```
 
 ## unshift
 
-Bad
 
 ```ruby
+# bad
 a=[1,2,3]
 a.unshift(4) #=> [4,1,2,3]
-```
 
-Good
-
-```ruby
+# good
 a=[1,2,3]
 a=[4]+a #=> [4,1,2,3]
 ```
 
 ## sum
 
-Bad
 
 ```ruby
+# bad
 [1,2,3].inject(:+) #=> 6
-```
 
-Good
-
-```ruby
+# good
 eval"[1,2,3]*?+" #=> 6
 ```
 
 ## index
 
-Bad
 
 ```ruby
+# bad
 [1,2,3].find_index(2) #=> 1
-```
 
-Good
-
-```ruby
+# good
 [1,2,3].index(2) #=> 1
 ```
 
