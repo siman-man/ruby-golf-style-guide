@@ -13,6 +13,19 @@ name='siman'
 n='siman'
 ```
 
+---
+
+同じ値を宣言する場合はまとめたほうがいいです
+
+```ruby
+# bad
+a=3
+b=3
+
+# good
+a=b=3
+```
+
 ## Special
 
 
