@@ -194,6 +194,18 @@ if 'ruby'[?r]
 end
 ```
 
+--- 
+
+```ruby
+s="Hello Ruby"
+
+# bad
+s.gsub(/Ruby/){|m|puts m} #=> Ruby
+
+# good
+s.gsub(/Ruby/){puts $&} #=> Ruby
+```
+
 ## other tips
 
 ```ruby
