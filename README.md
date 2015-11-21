@@ -81,6 +81,18 @@ $><<w
 puts [:hello]*10
 ```
 
+---
+
+```ruby
+$s="Ruby"
+
+# bad
+puts $s
+
+# good
+puts$s
+```
+
 ## Output(Numeric)
 
 

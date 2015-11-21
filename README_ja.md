@@ -59,7 +59,7 @@ $a=3
 puts "$a is #{$a}"
 
 # good
-puts "
+puts "$a is #$a"
 ```
 
 # 標準入出力
@@ -78,13 +78,24 @@ $><<w
 
 ---
 
-
 ```ruby
 # bad
 10.times{puts:hello}
 
 # good - 配列に対してputsを行うと、各要素からto_sを呼び出したものを出力します
 puts [:hello]*10
+```
+
+---
+
+```ruby
+$s="Ruby"
+
+# bad
+puts $s
+
+# good
+puts$s
 ```
 
 ## 出力(数値)
