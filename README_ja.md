@@ -5,105 +5,82 @@ Rubyのコードゴルフでの役立つ情報をまとめます
 
 ## 定義
 
-変数名は基本1文字で定義しましょう
+変数名は基本1文字で定義しましょう。
 
 ```ruby
+# bad (変数名が長すぎる)
 name='siman'
-```
 
-Good
-
-```ruby
+# good
 n='siman'
 ```
 
 ## 特殊変数
 
-Bad
+Ruby自身に最初から組み込まれている変数には、ゴルフで利用できる便利なものがそろっています。
 
+### 配列
 ```ruby
-a=[] #=> []
-```
+# bad (長い)
+a=[]
 
-Good
-
-```ruby
-$* #=> []
-```
-
----
-
-Bad
-
-```ruby
-ARGV
-```
-
-Good
-
-```ruby
+# good
 $*
 ```
 
 ---
 
-Bad
 
 ```ruby
-"\n"
+# bad (長い)
+ARGV
+
+# good
+$*
 ```
 
-Good
+---
 
 ```ruby
+# bad
+"\n"
+
+# good
 $/
 ```
 
-# 標準入出力
+# 標準入出力
 
 ## 出力
 
-Bad
-
 ```ruby
+# bad
 w="Hello Ruby!"
 puts w
-```
 
-Good
-
-```ruby
+# good
 w="Hello Ruby!"
 $><<w
 ```
 
 ---
 
-Bad
 
 ```ruby
+# bad
 10.times{puts:hello}
-```
 
-Good
-
-```ruby
+# good - 配列に対してputsを行うと、各要素からto_sを呼び出したものを出力します
 puts [:hello]*10
 ```
 
 ## 出力(数値)
 
-数値を出力する場合はpメソッドが短くて良いです。
-
-Bad
-
 ```ruby
+# bad
 puts 100
-```
 
-Good
-
-```ruby
+# good - 数値を出力する場合はpメソッドが短くて良いです
 p 100
 ```
 
@@ -111,61 +88,46 @@ p 100
 
 ## 三項演算子
 
-Bad
-
 ```ruby
+# bad
 if 3>2
   true
 else
   false
 end
-```
 
-Good
-
-```ruby
+# good
 3>2?true:false
 ```
 
-## Compare
-
-Bad
+## 比較演算子
 
 ```ruby
+# bad
 n<=0
-```
 
-Good
-
-```ruby
+# good
 n<1
 ```
 
 ## if
 
-Bad
 
 ```ruby
+# bad
 n=3 if a>3
-```
 
-Good
-
-```ruby
+# good
 a>3&&n=3
 ```
 
 ## unless
 
-Bad
-
 ```ruby
+# bad
 n=3 unless a>3
-```
 
-Good
-
-```ruby
+# good
 a>3||n=3
 ```
 
@@ -173,87 +135,64 @@ a>3||n=3
 
 ## split
 
-Bad
-
 ```ruby
+# bad
 'hello world ruby'.split(' ') #=> ['hello', 'world', 'ruby']
-```
 
-Good
-
-```ruby
+# good
 'hello world ruby'.split #=> ['hello', 'world', 'ruby']
 ```
 
 ---
 
-Bad
-
 ```ruby
+# bad
 "ruby".split('') #=> ["r", "u", "b", "y"]
-```
 
-Good
-
-```ruby
+# good
 "ruby".chars #=> ["r", "u", "b", "y"]
 ```
 
 ## 文字(Char)
 
-Bad
-
 ```ruby
+# bad
 c='a'
-```
 
-Good
-
-```ruby
+# good
 c=?a
 ```
 
 ## size
 
-Bad
-
 ```ruby
+# bad
 "hello\n".size-1 #=> 5
-```
 
-Good
-
-```ruby
+# good
 "hello\n"=~/$/ #=> 5
 ```
 
 ## シンボル(symbol)
 
-Bad
 
 ```ruby
+# bad
 puts"ruby"
-```
 
-Good
-
-```ruby
+# good
 puts:ruby
 ```
 
 ## match
 
-Bad
-
 ```ruby
+# bad
 if 'ruby'=~/r/
   puts 'hello!'
 end
-```
 
-Good
-
-```ruby
+# good
 if 'ruby'[?r]
   puts 'Hello!'
 end
@@ -285,74 +224,54 @@ n=1e4 #=> 10000.0
 
 ---
 
-Bad
-
 ```ruby
+# bad
 n=0.0001
-```
 
-Good
-
-```ruby
+# good
 n=1e-4 #=> 0.0001
 ```
 
 ---
 
-Bad
-
 ```ruby
+# bad
 a=-10
-```
 
-Good
-
-```ruby
+# good
 a=~9
 ```
 
 ---
 
-Bad
-
 ```ruby
+# bad
 a=n==0?1:0
-```
 
-Good
-
-```ruby
+# good
 a=1[n]
 ```
 
 ## Bit operation
 
-Bad
-
 ```ruby
+# bad
 n=3
 p (n+1)*3 #=> 12
-```
 
-Good
-
-```ruby
+# good
 n=3
 p -~n*3 #=> 12
 ```
 
 ---
 
-Bad
-
 ```ruby
+# bad
 n=3
 p (n-1)*3 #=> 6
-```
 
-Good
-
-```ruby
+# good
 n=3
 p ~-n*3 #=> 6
 ```
@@ -361,15 +280,12 @@ p ~-n*3 #=> 6
 
 ## join
 
-Bad
 
 ```ruby
+# bad
 [1,2,3].join('+') #=> 1+2+3
-```
 
-Good
-
-```ruby
+# good
 [1,2,3]*'+' #=> 1+2+3
 ```
 
@@ -381,29 +297,22 @@ Very Good
 
 ## uniq
 
-Bad
 
 ```ruby
+# bad
 [1,1,2,2,3,3].uniq #=> [1,2,3]
-```
 
-Good
-
-```ruby
+# good
 [1,1,2,2,3,3]|[] #=> [1,2,3]
 ```
 
 ## define
 
-Bad
-
 ```ruby
+# bad
 a=[1,2,3,4,5] #=> [1,2,3,4,5]
-```
 
-Good
-
-```ruby
+# good
 a=1,2,3,4,5 #=> [1,2,3,4,5]
 ```
 
@@ -415,45 +324,34 @@ a=[*1..5] #=> [1,2,3,4,5]
 
 ---
 
-Bad
 
 ```ruby
+# bad
 a=['ruby','rails','jruby']
-```
 
-Good
-
-```ruby
+# good
 a=%w(ruby rails jruby)
 ```
 
 ## unshift
 
-Bad
-
 ```ruby
+# bad
 a=[1,2,3]
 a.unshift(4) #=> [4,1,2,3]
-```
 
-Good
-
-```ruby
+# good
 a=[1,2,3]
 a=[4]+a #=> [4,1,2,3]
 ```
 
 ## sum
 
-Bad
-
 ```ruby
+# bad
 [1,2,3].inject(:+) #=> 6
-```
 
-Good
-
-```ruby
+# good
 eval"[1,2,3]*?+" #=> 6
 ```
 
@@ -462,10 +360,10 @@ eval"[1,2,3]*?+" #=> 6
 Rubyでは同じ動作でもっと短い関数名が存在していたりします。
 
 ```ruby
-# Bad
+# bad
 [1,2,3].find_index(2) #=> 1
 
-# Good
+# good
 [1,2,3].index(2) #=> 1
 ```
 
