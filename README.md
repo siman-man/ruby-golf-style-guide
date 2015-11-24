@@ -404,6 +404,20 @@ eval"[1,2,3]*?+" #=> 6
 [1,2,3].index(2) #=> 1
 ```
 
+# Enumerator
+
+```ruby
+n="10"
+t="1"
+i=0
+
+# bad
+n.to_i.times{i+=t.to_i}
+
+# good
+eval"i+=#{t};"*n.to_i
+```
+
 
 # Hash
 
