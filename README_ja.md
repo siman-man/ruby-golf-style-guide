@@ -373,7 +373,7 @@ a=[*1..5] #=> [1,2,3,4,5]
 # bad
 a=['ruby','rails','jruby']
 
-# good
+# good - %wな記法に置き換えることで短くなります
 a=%w(ruby rails jruby)
 ```
 
