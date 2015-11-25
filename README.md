@@ -418,6 +418,18 @@ n.to_i.times{i+=t.to_i}
 eval"i+=#{t};"*n.to_i
 ```
 
+---
+
+```ruby
+n=5
+
+# bad
+(1..n-1).to_a #=> [1, 2, 3, 4]
+
+# good
+(1...n).to_a #=> [1, 2, 3, 4]
+```
+
 
 # Hash
 
