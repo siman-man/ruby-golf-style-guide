@@ -71,7 +71,7 @@ $a=3
 # bad
 puts "$a is #{$a}"
 
-# good
+# good - グローバル変数は{}を省略しても参照できます
 puts "$a is #$a"
 ```
 
