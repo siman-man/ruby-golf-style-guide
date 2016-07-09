@@ -1,6 +1,33 @@
 # Code Golf tips of ruby
 Code golf tips of ruby.
 
+# Command Line Option
+
+It is important to shorten a processing of input.
+
+bad
+```ruby
+while gets
+  puts $_
+end
+```
+
+Add option 「-n」, each input line is inserted into variable $_.
+
+good
+```ruby
+#!ruby -n
+puts $_
+```
+
+Add option 「-p」, At the end of program, execute 「puts $_」
+
+very good
+```ruby
+#!ruby -np
+```
+
+
 # Variable
 
 ## define
@@ -230,7 +257,7 @@ if 'ruby'[?r]
 end
 ```
 
---- 
+---
 
 ```ruby
 s="Hello Ruby"
