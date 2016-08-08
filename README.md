@@ -454,6 +454,18 @@ eval"[1,2,3]*?+" #=> 6
 [1,2,3].index(2) #=> 1
 ```
 
+## other
+
+update max value
+
+```ruby
+# bad
+a=[a,b+1].max
+
+# good
+a>b||a=b+1
+```
+
 # Enumerator
 
 ```ruby
