@@ -13,6 +13,20 @@ puts "hello world"
 puts"hello world"
 ```
 
+# Remove parentheses
+
+There isn't need parentheses in CodeGolf.
+
+```ruby
+# bad
+puts("hello")
+[1,2,3].map(&:to_s)
+
+# good
+puts"hello"
+[1,2,3].map &:to_s
+```
+
 # Command Line Option
 
 It is important to shorten a processing of input.
