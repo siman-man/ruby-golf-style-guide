@@ -1,6 +1,18 @@
 # Code Golf tips of ruby
 Code golf tips of ruby.
 
+# Remove whitespace.
+
+There isn't need whitespace in CodeGolf.
+
+```ruby
+# bad
+puts "hello world"
+
+# good
+puts"hello world"
+```
+
 # Command Line Option
 
 It is important to shorten a processing of input.
