@@ -345,6 +345,17 @@ a=n==0?1:0
 a=1[n]
 ```
 
+### Radix conversion
+
+`to_s` can specify radix when convert integer to string.
+
+```ruby
+16.to_s     #=> "16"
+16.to_s(2)  #=> "10000"
+16.to_s(8)  #=> "20"
+16.to_s(16) #=> "10"
+```
+
 ## Bit operation
 
 
