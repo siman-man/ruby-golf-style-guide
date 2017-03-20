@@ -423,6 +423,13 @@ n=3
 [1,2,3][0,0]=4 #=> [4, 1, 2, 3]
 ```
 
+#### compact
+
+```ruby
+p [nil,1,2,3,nil].compact #=> [1, 2, 3]
+p [nil,1,2,3,nil]-[p]     #=> [1, 2, 3]
+```
+
 ## define
 
 
@@ -471,13 +478,15 @@ a=[4]+a #=> [4,1,2,3]
 
 ## sum
 
-
 ```ruby
 # bad
 [1,2,3].inject(:+) #=> 6
 
 # good
 eval"[1,2,3]*?+" #=> 6
+
+# very good (RUBY_VERSION >= 2.4)
+[1,2,3].sum
 ```
 
 ## index
