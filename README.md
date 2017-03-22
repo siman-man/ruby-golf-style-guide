@@ -463,18 +463,6 @@ a=['ruby','rails','jruby']
 a=%w(ruby rails jruby)
 ```
 
-## unshift
-
-
-```ruby
-# bad
-a=[1,2,3]
-a.unshift(4) #=> [4,1,2,3]
-
-# good
-a=[1,2,3]
-a=[4]+a #=> [4,1,2,3]
-```
 
 ## sum
 
