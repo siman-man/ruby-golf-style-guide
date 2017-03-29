@@ -56,17 +56,21 @@ very good
 
 # Variable
 
+Variables should be defined with one character.
+
 ## define
 
 ```ruby
-# bad (too many character)
-name='siman'
+# bad
+word='ruby'
 
 # good
-n='siman'
+w='ruby'
 ```
 
 ---
+
+if same value, variables can be declared together.
 
 ```ruby
 # bad
@@ -75,6 +79,15 @@ b=3
 
 # good
 a=b=3
+```
+
+#### Multiple assignment
+
+```ruby
+a,b,c=[1,2,3]      #=> a=1, b=2, c=3
+a,b,*c=[1,2,3,4,5] #=> a=1, b=2, c=[3,4,5]
+a,*b,c=[1,2,3,4,5] #=> a=1, b=[2,3,4], c=5
+a,*b=1             #=> a=1, b=[]
 ```
 
 ## Special
