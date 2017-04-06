@@ -146,6 +146,15 @@ puts "$a is #$a"
 ```
 
 
+# Get nil by using p method
+
+`p` method return `nil` if doesn't output anything.
+
+```ruby
+p p #=> nil
+```
+
+
 # STDIO
 
 ## Output
