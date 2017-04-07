@@ -159,7 +159,7 @@ use methods which name shorter in code golf.
 
 # Block use `{...}` instead of `do end`
 
-```
+```ruby
 # bad
 10.times do|n|puts"#{n} hello"end
 
