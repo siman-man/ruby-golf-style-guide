@@ -27,17 +27,6 @@ puts"hello"
 [1,2,3].map &:to_s
 ```
 
-# Use shorter method name
-
-use methods which name shorter in code golf.
-
-```ruby
-# bad
-[1,2,3].find_index(2) #=> 1
-
-# good
-[1,2,3].index(2) #=> 1
-```
 
 # Command Line Option
 
@@ -152,6 +141,19 @@ puts "$a is #$a"
 
 ```ruby
 p p #=> nil
+```
+
+
+# Use shorter method name
+
+use methods which name shorter in code golf.
+
+```ruby
+# bad
+[1,2,3].find_index(2) #=> 1
+
+# good
+[1,2,3].index(2) #=> 1
 ```
 
 
