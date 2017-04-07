@@ -223,13 +223,13 @@ p 100
 ```ruby
 # bad
 if 3>2
-  true
+  'hoge'
 else
-  false
+  'piyo'
 end
 
 # good
-3>2?true:false
+3>2?'hoge':'piyo'
 ```
 
 ## Compare
