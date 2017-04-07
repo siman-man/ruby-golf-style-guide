@@ -157,6 +157,17 @@ use methods which name shorter in code golf.
 ```
 
 
+# Block use `{...}` instead of `do end`
+
+```
+# bad
+10.times do|n|puts"#{n} hello"end
+
+# good
+10.times{|n|puts"#{n} hello"}
+```
+
+
 # STDIO
 
 ## Output
