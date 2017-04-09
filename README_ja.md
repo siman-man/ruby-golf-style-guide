@@ -134,10 +134,10 @@ puts'hello';puts'world'
 
 ```ruby
 # bad
-n <= 3
+n<=3
 
 # good
-n < 4
+n<4
 ```
 
 これとは別ですがRangeの `..` も `...` を使うことで短くなるパターンがあります。

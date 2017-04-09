@@ -167,6 +167,18 @@ use methods which name shorter in code golf.
 10.times{|n|puts"#{n} hello"}
 ```
 
+# Comparison operator is one character
+
+replace comparison operators `==`, `<=` and `>=` with `>` or `<` if possible.
+
+```ruby
+# bad
+n<=3
+
+# good
+n<4
+``
+
 
 # STDIO
 
@@ -232,15 +244,6 @@ end
 3>2?'hoge':'piyo'
 ```
 
-## Compare
-
-```ruby
-# bad
-n<=0
-
-# good
-n<1
-```
 
 ## if
 
