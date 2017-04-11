@@ -415,7 +415,7 @@ a=1[n]
 p 1[0] #=> 1
 p 2[0] #=> 0
 p 3[0] #=> 1
-``
+```
 
 
 ## Bit operation
@@ -443,7 +443,35 @@ n=3
 ~-n*3 #=> 6
 ```
 
+
 # Array
+
+#### Literal
+
+```ruby
+# bad
+a=Array.new
+
+# good
+a=[]
+```
+
+```ruby
+# bad
+a=['hoge','piyo','fuga']
+
+# good
+a=%w(hoge piyo fuga)
+```
+
+```ruby
+# bad
+a=[1,2,3,4,5]
+
+# good
+a=*1..5
+```
+
 
 ## join
 
@@ -492,16 +520,6 @@ p [nil,1,2,3,nil].compact #=> [1, 2, 3]
 p [nil,1,2,3,nil]-[p]     #=> [1, 2, 3]
 ```
 
-## define
-
-
-```ruby
-# bad
-a=[1,2,3,4,5] #=> [1,2,3,4,5]
-
-# good
-a=[*1..5] #=> [1,2,3,4,5]
-```
 
 ## reverse
 
@@ -514,17 +532,6 @@ a.reverse #=> [2, 1]
 # good
 a.rotate #=> [2, 1]
 ```
-
----
-
-```ruby
-# bad
-a=['ruby','rails','jruby']
-
-# good
-a=%w(ruby rails jruby)
-```
-
 
 ## sum
 
