@@ -406,6 +406,18 @@ a=1[n]
 16.to_s(16) #=> "10"
 ```
 
+
+#### get bit value
+
+`[]` method can get bit value.
+
+```ruby
+p 1[0] #=> 1
+p 2[0] #=> 0
+p 3[0] #=> 1
+``
+
+
 ## Bit operation
 
 
