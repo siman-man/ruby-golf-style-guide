@@ -28,33 +28,6 @@ puts"hello"
 ```
 
 
-# Command Line Option
-
-It is important to shorten a processing of input.
-
-bad
-```ruby
-while gets
-  puts $_
-end
-```
-
-Add option 「-n」, each input line is inserted into variable $_.
-
-good
-```ruby
-#!ruby -n
-puts $_
-```
-
-Add option 「-p」, At the end of program, execute 「puts $_」
-
-very good
-```ruby
-#!ruby -np
-```
-
-
 # Variable
 
 Variables should be defined with one character.
@@ -91,51 +64,18 @@ a,*b,c=[1,2,3,4,5] #=> a=1, b=[2,3,4], c=5
 a,*b=1             #=> a=1, b=[]
 ```
 
-## Special
 
+#### Global variable
 
-```ruby
-# bad
-a=[] #=> []
+if `$` is placed at the beginning of a variable name, it becomes a global variable.
 
-# good
-$* #=> []
-```
-
----
+Calling undefined global variables will only return `nil` and no error will occur.
 
 ```ruby
-# bad
-ARGV
-
-# good
-$*
+$a #=> nil
 ```
 
----
-
-```ruby
-# bad
-"\n"
-
-# good
-$/
-```
-
-## Global
-
-```ruby
-$a=3
-
-# bad
-puts "$a is #{$a}"
-
-# good
-puts "$a is #$a"
-```
-
-
-# Get nil by using p method
+#### Get `nil` with one character
 
 `p` method return `nil` if doesn't output anything.
 
@@ -167,6 +107,25 @@ use methods which name shorter in code golf.
 10.times{|n|puts"#{n} hello"}
 ```
 
+
+# Reduce newline codes
+
+In the Windows environment, because the newline code is defined with `\r\n`, reduce the number of lines.
+
+```ruby
+# bad
+puts'hello'
+puts'world'
+
+# good
+puts'hello';puts'world'
+```
+
+# Read the document
+
+TBD
+
+
 # Comparison operator is one character
 
 replace comparison operators `==`, `<=` and `>=` with `>` or `<` if possible.
@@ -177,6 +136,126 @@ n<=3
 
 # good
 n<4
+```
+
+There are patterns that are shortened by using `...`
+
+```ruby
+# bad
+(0..n-1).each{|n|p n}
+
+# good
+(0...n).each{|n|p n}
+```
+
+
+# Treat logical operators as conditional expressions
+
+Use short-circuit evaluation and treat logical operators `&&` and `||` as conditional expressions.
+
+```ruby
+# bad
+if true
+  n=3
+end
+
+# good
+true&&n=3
+```
+
+```ruby
+# bad
+unless false
+  n=3
+end
+
+# good
+false||n=3
+```
+
+
+# Ternary operator
+
+```ruby
+# bad
+if 3>2
+  333
+else
+  777
+end
+
+# good
+3>2?333:777
+```
+
+
+## Special
+
+
+```ruby
+# bad
+a=[] #=> []
+
+# good
+$* #=> []
+```
+
+---
+
+```ruby
+# bad
+ARGV
+
+# good
+$*
+```
+
+---
+
+```ruby
+# bad
+"\n"
+
+# good
+$/
+```
+
+# Command Line Option
+
+It is important to shorten a processing of input.
+
+bad
+```ruby
+while gets
+  puts $_
+end
+```
+
+Add option 「-n」, each input line is inserted into variable $_.
+
+good
+```ruby
+#!ruby -n
+puts $_
+```
+
+Add option 「-p」, At the end of program, execute 「puts $_」
+
+very good
+```ruby
+#!ruby -np
+```
+
+## Global
+
+```ruby
+$a=3
+
+# bad
+puts "$a is #{$a}"
+
+# good
+puts "$a is #$a"
 ```
 
 
@@ -227,43 +306,6 @@ puts 100
 p 100
 ```
 
-# Condition
-
-## Ternary operator
-
-
-```ruby
-# bad
-if 3>2
-  'hoge'
-else
-  'piyo'
-end
-
-# good
-3>2?'hoge':'piyo'
-```
-
-
-## if
-
-```ruby
-# bad
-n=3 if a>3
-
-# good
-a>3&&n=3
-```
-
-## unless
-
-```ruby
-# bad
-n=3 unless a>3
-
-# good
-a>3||n=3
-```
 
 # String
 
@@ -570,18 +612,6 @@ n.to_i.times{i+=t.to_i}
 
 # good
 eval"i+=#{t};"*n.to_i
-```
-
----
-
-```ruby
-n=5
-
-# bad
-(1..n-1).to_a #=> [1, 2, 3, 4]
-
-# good
-(1...n).to_a #=> [1, 2, 3, 4]
 ```
 
 
